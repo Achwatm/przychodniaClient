@@ -1,0 +1,39 @@
+<html>
+<body>
+<form  [formGroup]="doctor" (ngSubmit)="onSubmit()">
+
+  <label>
+    Id Lekarza:
+    <input type="text" formControlName="doctorId">
+  </label>
+
+  <label>
+    Imie
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Nazwisko:
+    <input type="text" formControlName="surname">
+  </label>
+
+  <label>
+    Specjalność:
+    <input type="text" formControlName="speciality">
+  </label>
+
+  <label>
+    Nr pozwolenia:
+    <input type="text" formControlName="licenseNumber">
+  </label>
+
+  <label>
+    Nr telefonu:
+    <input type="text" formControlName="phoneNumber">
+  </label>
+
+
+  <button type="submit" [disabled]="!doctor.valid">Submit</button>
+</form>
+</body>
+</html>

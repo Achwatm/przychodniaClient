@@ -1,0 +1,4 @@
+<table>
+  <tr><td>Id lekarza</td><td>Imie</td><td>Nazwisko</td><td>Specjalizacja</td><td>Nr pozwolenia</td><td>Nr telefonu</td></tr>
+  <tr *ngFor="let doc of doctor"><td>{{doc.doctorId}}</td><td>{{doc.name}}</td><td>{{doc.surname}}</td><td>{{doc.speciality}}</td><td>{{doc.licenseNumber}}</td><td>{{doc.phoneNumber}}</td></tr>
+</table>
