@@ -1,0 +1,32 @@
+<html>
+<body>
+<form  id="box" [formGroup]="signup" (ngSubmit)="onSubmit()">
+
+  <label>
+    ZALOGUJ SIĘ
+  </label>
+
+  <label >
+    Pesel
+    <input type="text" formControlName="pesel">
+  </label>
+
+  <label>
+    Hasło:
+    <input type="text" formControlName="haslo">
+  </label>
+
+  <label>
+    Powtórz hasło:
+    <input type="text" formControlName="rhaslo">
+  </label>
+
+  <label>
+    Hasło:
+    <input type="text" formControlName="haslo">
+  </label>
+
+  <button type="submit" [disabled]="!doctor.valid">Submit</button>
+</form>
+</body>
+</html>

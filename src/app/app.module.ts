@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { PatientAddFormComponent } from './forms/patient-add-form/patient-add-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PatientsComponent } from './patients/patients.component';
+import { PatientsComponent } from './components/patients/patients.component';
 import { DoctorAddFormComponent } from './forms/doctor-add-form/doctor-add-form.component';
-import { DoctorsComponent } from './doctors/doctors.component';
+import { DoctorsComponent } from './components/doctors/doctors.component';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { SignUpFormComponent } from './forms/sign-up-form/sign-up-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DoctorsComponent } from './doctors/doctors.component';
     PatientAddFormComponent,
     PatientsComponent,
     DoctorAddFormComponent,
-    DoctorsComponent
+    DoctorsComponent,
+    LogInComponent,
+    SignUpFormComponent
   ],
   imports: [
     BrowserModule,
