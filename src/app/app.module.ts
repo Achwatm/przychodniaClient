@@ -11,6 +11,7 @@ import { DoctorAddFormComponent } from './forms/doctor-add-form/doctor-add-form.
 import { DoctorsComponent } from './components/doctors/doctors.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { SignUpFormComponent } from './forms/sign-up-form/sign-up-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SignUpFormComponent } from './forms/sign-up-form/sign-up-form.component
     DoctorAddFormComponent,
     DoctorsComponent,
     LogInComponent,
-    SignUpFormComponent
+    SignUpFormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

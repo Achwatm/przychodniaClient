@@ -12,7 +12,7 @@ export class DataService {
     })
   };
   public Patient: Object;
-  private url = 'http://192.168.1.103:8888';
+  private url = 'http://192.168.1.101:8888';
   constructor(private http: HttpClient) {
   }
 

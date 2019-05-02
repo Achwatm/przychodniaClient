@@ -5,6 +5,7 @@ body{
   justify-content: center;
   align-items: center;
   background-image: url("../../../assets/background/back.jpg");
+  z-index: 1;
 }
 form{
   flex-direction: column;

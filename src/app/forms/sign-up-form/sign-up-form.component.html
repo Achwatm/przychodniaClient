@@ -1,9 +1,9 @@
 <html>
-<body>
+<body >
 <form  id="box" [formGroup]="signup" (ngSubmit)="onSubmit()">
 
   <label>
-    ZALOGUJ SIĘ
+    ZAREJESTRUJ SIĘ:
   </label>
 
   <label >
@@ -13,20 +13,20 @@
 
   <label>
     Hasło:
-    <input type="text" formControlName="haslo">
+    <input type="text" formControlName="password">
   </label>
 
   <label>
     Powtórz hasło:
-    <input type="text" formControlName="rhaslo">
+    <input type="text" formControlName="rpassword">
   </label>
-
   <label>
-    Hasło:
-    <input type="text" formControlName="haslo">
+    E-mail:
+    <input type="text" formControlName="mail">
   </label>
 
-  <button type="submit" [disabled]="!doctor.valid">Submit</button>
+
+  <button type="submit" [disabled]="!signup.valid">Zarejestruj</button>
 </form>
 </body>
 </html>
