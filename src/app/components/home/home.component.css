@@ -1,0 +1,15 @@
+body{
+  width:100%;
+  height: 80%;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,.5);
+  color: white;
+}
+ul {
+  counter-reset: li;
+  list-style: none;
+  padding: 0;
+}

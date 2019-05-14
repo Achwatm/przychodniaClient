@@ -4,6 +4,8 @@ import { PatientsComponent } from './components/patients/patients.component';
 import {DoctorsComponent} from './components/doctors/doctors.component';
 import {LogInComponent} from './components/log-in/log-in.component';
 import {SignUpFormComponent} from './forms/sign-up-form/sign-up-form.component';
+import {HomeComponent} from './components/home/home.component';
+import {PatientAddFormComponent} from './forms/patient-add-form/patient-add-form.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path: 'registration',
     component: SignUpFormComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'patientAdd',
+    component: PatientAddFormComponent
   }
 ];
 

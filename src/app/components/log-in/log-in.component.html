@@ -13,7 +13,16 @@
 
   <label>
     Hasło:
-    <input type="text" formControlName="password">
+    <input type="password" formControlName="password">
+  </label>
+
+  <label>
+    Rola:
+  <select name="nazwa" formControlName="role">
+    <option>user</option>
+    <option>doctor</option>
+    <option>receptionist</option>
+  </select>
   </label>
 
   <button type="submit" [disabled]="!login.valid">Submit</button>

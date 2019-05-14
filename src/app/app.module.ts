@@ -12,6 +12,7 @@ import { DoctorsComponent } from './components/doctors/doctors.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { SignUpFormComponent } from './forms/sign-up-form/sign-up-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     DoctorsComponent,
     LogInComponent,
     SignUpFormComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

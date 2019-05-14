@@ -13,17 +13,14 @@
 
   <label>
     Hasło:
-    <input type="text" formControlName="password">
+    <input type="password" formControlName="password">
   </label>
 
   <label>
     Powtórz hasło:
-    <input type="text" formControlName="rpassword">
+    <input type="password" formControlName="rpassword">
   </label>
-  <label>
-    E-mail:
-    <input type="text" formControlName="mail">
-  </label>
+
 
 
   <button type="submit" [disabled]="!signup.valid">Zarejestruj</button>

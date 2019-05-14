@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Patient} from '../classes/patient';
+import {User} from '../classes/user';
 
 @Injectable({providedIn: 'root'})
 export class DataService {
@@ -12,7 +13,7 @@ export class DataService {
     })
   };
   public Patient: Object;
-  private url = 'http://192.168.1.101:8888';
+  private url = 'http://localhost:8888';
   constructor(private http: HttpClient) {
   }
 
@@ -40,6 +41,31 @@ export class DataService {
     return this.http.post(this.url + '/addDoctor', patient, this.httpOptions).subscribe(
       (val) => {
         console.log('POST call successful value returned in body', val);
+      },
+      response => {
+        console.log('POST call in error', response);
+      },
+      () => {
+        console.log('The POST observable is now completed.');
+      });
+  }
+  addUser(user: User) {
+    return this.http.post(this.url + '/addUser', user, this.httpOptions).subscribe(
+      (val) => {
+        console.log('POST call successful value returned in body', val);
+      },
+      response => {
+        console.log('POST call in error', response);
+      },
+      () => {
+        console.log('The POST observable is now completed.');
+      });
+  }
+  login(user: User) {
+    return this.http.post(this.url + '/login', user, this.httpOptions).subscribe(
+      (val) => {
+        console.log('POST call successful value returned in body', val);
+       sessionStorage.setItem('rola', user.role );
       },
       response => {
         console.log('POST call in error', response);

@@ -1,10 +1,13 @@
 <div id="container" style="display: flex; justify-content: space-around">
   <img src="../../assets/background/menu.jpg" width="100px" >
-<nav  >
-  <a [routerLink]= "['/patients']"><div> Pacjenci </div> </a>
-  <a style="align-content: center" [routerLink]= "['/doctors']" ><div> Lekarze  </div></a>
- <a [routerLink]= "['/log-in']">  <div>Logowanie</div></a>
-  <a [routerLink]= "['/registration']" > <div>Rejestracja</div></a>
+<nav>
+  <a  [routerLink]= "['/home']"><div> Strona główna </div> </a>
+  <a *ngIf="role == 'user' " [routerLink]= "['/patients']"><div> Pacjenci </div> </a>
+  <a *ngIf="role == '' " [routerLink]= "['/patientAdd']"><div> Dodaj pacjenta </div> </a>
+  <a  style="align-content: center" [routerLink]= "['/doctors']" ><div> Lekarze  </div></a>
+ <a *ngIf="role == ''" [routerLink]= "['/log-in']">  <div>Logowanie</div></a>
+  <a *ngIf="role == ''" [routerLink]= "['/registration']" > <div>Rejestracja</div></a>
+  <a *ngIf="role != ''" [routerLink]= "['/log-in']" (click)="logout()" > <div>logout</div></a>
 </nav>
   <img src="../../assets/background/menu.jpg" width="100px" >
 </div>
