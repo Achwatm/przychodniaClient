@@ -3,11 +3,11 @@
 <nav>
   <a  [routerLink]= "['/home']"><div> Strona główna </div> </a>
   <a *ngIf="role == 'user' " [routerLink]= "['/patients']"><div> Pacjenci </div> </a>
-  <a *ngIf="role == '' " [routerLink]= "['/patientAdd']"><div> Dodaj pacjenta </div> </a>
+  <a *ngIf="role == '' || role == NULL" [routerLink]= "['/patientAdd']"><div> Dodaj pacjenta </div> </a>
   <a  style="align-content: center" [routerLink]= "['/doctors']" ><div> Lekarze  </div></a>
- <a *ngIf="role == ''" [routerLink]= "['/log-in']">  <div>Logowanie</div></a>
-  <a *ngIf="role == ''" [routerLink]= "['/registration']" > <div>Rejestracja</div></a>
-  <a *ngIf="role != ''" [routerLink]= "['/log-in']" (click)="logout()" > <div>logout</div></a>
+ <a *ngIf="role == '' || role == NULL" [routerLink]= "['/log-in']">  <div>Logowanie</div></a>
+  <a *ngIf="role == '' || role == NULL" [routerLink]= "['/registration']" > <div>Rejestracja</div></a>
+  <a *ngIf="role != '' && role != NULL" [routerLink]= "['/log-in']" (click)="logout()" > <div>logout</div></a>
 </nav>
   <img src="../../assets/background/menu.jpg" width="100px" >
 </div>

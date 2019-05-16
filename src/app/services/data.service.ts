@@ -69,6 +69,7 @@ export class DataService {
       },
       response => {
         console.log('POST call in error', response);
+        alert('Błąd logowania, sprawdź dane logowania');
       },
       () => {
         console.log('The POST observable is now completed.');

@@ -7,33 +7,31 @@
     <input type="text" formControlName="pesel">
   </label>
 
+    <label>
+      Imie:
+      <input type="text" formControlName="imie">
+    </label>
+
+    <label>
+    Nazwisko:
+    <input type="text" formControlName="nazwisko">
+  </label>
+
   <label>
     Adres:
     <input type="text" formControlName="adres">
   </label>
 
+    <label>
+      Nr Telefonu:
+      <input type="text" formControlName="nrTelefonu">
+    </label>
+
   <label>
     Nr ubezpieczenia:
     <input type="text" formControlName="nrUbezpieczenia">
   </label>
-
-  <label>
-    Imie:
-    <input type="text" formControlName="imie">
-  </label>
-
-  <label>
-    Nr Telefonu:
-    <input type="text" formControlName="nrTelefonu">
-  </label>
-
-  <label>
-    Nazwisko:
-    <input type="text" formControlName="nazwisko">
-  </label>
-
-
-  <button type="submit" [disabled]="!patient.valid">Submit</button>
+    <button type="submit" [disabled]="!patient.valid">Submit</button>
 </form>
 <app-patients></app-patients>
 </body>
