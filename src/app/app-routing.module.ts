@@ -7,6 +7,9 @@ import {SignUpFormComponent} from './forms/sign-up-form/sign-up-form.component';
 import {HomeComponent} from './components/home/home.component';
 import {PatientAddFormComponent} from './forms/patient-add-form/patient-add-form.component';
 import {PatientCardComponent} from './components/patient-card/patient-card.component';
+import {AddToCardComponent} from './forms/add-to-card/add-to-card.component';
+import {AddReferralComponent} from './forms/add-referral/add-referral.component';
+import {DoctorAddFormComponent} from './forms/doctor-add-form/doctor-add-form.component';
 
 const routes: Routes = [
   {
@@ -34,8 +37,20 @@ const routes: Routes = [
     component: PatientAddFormComponent
   },
   {
+    path: 'doctorAdd',
+    component: DoctorAddFormComponent
+  },
+  {
     path: 'showPatientCard/' + sessionStorage.getItem('pesel') ,
     component: PatientCardComponent
+  },
+  {
+    path: 'addRegistry',
+    component: AddToCardComponent
+  },
+  {
+    path: 'addReferral',
+    component: AddReferralComponent
   }
 ];
 

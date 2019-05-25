@@ -1,5 +1,5 @@
 <body>
-<h1 style="color: white">Lista lekarzy</h1>
+<h1 style="color: white">Lista Pacjentów</h1>
 <table>
   <tr><td>Pesel</td><td>Imie</td><td>Nazwisko</td><td>Adres</td><td>Nr Ubezpieczenia</td><td>Nr Telefonu</td></tr>
   <tr *ngFor="let pat of patient"><td>{{pat.pesel}}</td><td>{{pat.imie}}</td><td>{{pat.nazwisko}}</td><td>{{pat.adres}}</td><td>{{pat.nrUbezpieczenia}}</td><td>{{pat.nrTelefonu}}</td></tr>

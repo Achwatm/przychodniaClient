@@ -1,0 +1,31 @@
+<html>
+<body>
+<h1>Wystaw skierowanie:</h1>
+<form  [formGroup]="referral" (ngSubmit)="onSubmit()">
+
+  <label>
+    Pesel:
+    <input type="text" formControlName="pesel">
+  </label>
+
+
+  <label>
+    Rodzaj badania:
+    <input type="text" formControlName="typeOfTest">
+  </label>
+
+  <label>
+    Data wystawienia:
+    <input type="date" formControlName="date">
+  </label>
+
+  <label>
+    Id lekarza
+    <input type="text" formControlName="doctorId">
+  </label>
+
+
+  <button type="submit" [disabled]="!referral.valid">Dodaj Wpis</button>
+</form>
+</body>
+</html>

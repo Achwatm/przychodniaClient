@@ -21,13 +21,20 @@ export class LogInComponent {
         console.log(this.login.value);
         this.data.login(this.login.value);
         console.log(sessionStorage.getItem('rola'));
+        window.location.href = 'home';
       } else
         if (this.login.controls['role'].value === 'doctor') {
           console.log(this.login.value);
           this.data.doctorLogin(this.login.value);
           console.log(sessionStorage.getItem('rola'));
-        }
-      window.location.href = 'home';
+          window.location.href = 'home';
+        } else
+          if (this.login.controls['role'].value === 'receptionist') {
+            console.log(this.login.value);
+            this.data.receptionistLogin(this.login.value);
+            console.log(sessionStorage.getItem('rola'));
+            window.location.href = 'home';
+          }
   }
 
 }

@@ -23,7 +23,8 @@ export class PatientAddFormComponent {
   }
   onSubmit() {
     this.data.addPatient(this.patient.value);
-    console.log('wysyla');
+    alert('Dodano pacjenta');
+    window.location.reload();
   }
 }
 

@@ -8,12 +8,13 @@ import {DataService} from '../../services/data.service';
 })
 export class PatientCardComponent implements OnInit {
 patientCard: Object;
-
+pesel: String;
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.data.getPatientCard().subscribe(response =>
       this.patientCard = response);
+    this.pesel = sessionStorage.getItem('pesel');
   }
 
 }

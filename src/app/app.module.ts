@@ -15,6 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { PatientCardComponent } from './components/patient-card/patient-card.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
+import { AddToCardComponent } from './forms/add-to-card/add-to-card.component';
+import { AddReferralComponent } from './forms/add-referral/add-referral.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MyAccountComponent } from './components/my-account/my-account.component
     NavbarComponent,
     HomeComponent,
     PatientCardComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    AddToCardComponent,
+    AddReferralComponent
   ],
   imports: [
     BrowserModule,

@@ -23,6 +23,6 @@ export class DoctorAddFormComponent {
   }
   onSubmit() {
     this.data.addDoctor(this.doctor.value);
-    console.log('wysyla');
-  }
+    alert('Dodano lekarza');
+    window.location.reload();  }
 }

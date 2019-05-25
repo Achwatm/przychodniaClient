@@ -3,6 +3,8 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Patient} from '../classes/patient';
 import {User} from '../classes/user';
+import {Card} from '../classes/card';
+import {Referral} from '../classes/referral';
 
 @Injectable({providedIn: 'root'})
 export class DataService {
@@ -61,6 +63,30 @@ export class DataService {
         console.log('The POST observable is now completed.');
       });
   }
+  addRegistry(card: Card) {
+    return this.http.post(this.url + '/addRegistry', card, this.httpOptions).subscribe(
+      (val) => {
+        console.log('POST call successful value returned in body', val);
+      },
+      response => {
+        console.log('POST call in error', response);
+      },
+      () => {
+        console.log('The POST observable is now completed.');
+      });
+  }
+  addReferral(referral: Referral) {
+    return this.http.post(this.url + '/addReferral', referral, this.httpOptions).subscribe(
+      (val) => {
+        console.log('POST call successful value returned in body', val);
+      },
+      response => {
+        console.log('POST call in error', response);
+      },
+      () => {
+        console.log('The POST observable is now completed.');
+      });
+  }
   login(user: User) {
     return this.http.post(this.url + '/login', user, this.httpOptions).subscribe(
       (val) => {
@@ -78,6 +104,21 @@ export class DataService {
   }
   doctorLogin(user: User) {
     return this.http.post(this.url + '/doctorLogin', user, this.httpOptions).subscribe(
+      (val) => {
+        console.log('POST call successful value returned in body', val);
+        sessionStorage.setItem('rola', user.role );
+        sessionStorage.setItem('pesel', user.pesel.toString() );
+      },
+      response => {
+        console.log('POST call in error', response);
+        alert('Błąd logowania, sprawdź dane logowania');
+      },
+      () => {
+        console.log('The POST observable is now completed.');
+      });
+  }
+  receptionistLogin(user: User) {
+    return this.http.post(this.url + '/receptionistLogin', user, this.httpOptions).subscribe(
       (val) => {
         console.log('POST call successful value returned in body', val);
         sessionStorage.setItem('rola', user.role );

@@ -1,11 +1,12 @@
 <html>
 <body>
 <div>
-<div>Pesel: {{patientCard.pesel}}</div>
-<div>Imie i nazwisko: {{patientCard.name}} {{patientCard.surname}}</div>
-<div>Historia wiyt: {{patientCard.visitHistory}}</div>
-<div>Zalecenia: {{patientCard.recom}}</div>
-<div>Id lekarza: {{patientCard.doctorId}}</div>
+<div>Pesel: {{pesel}}</div>
+<div class="blok" *ngFor="let card of patientCard">
+<div>Opis wizyty: {{card.visit}}</div>
+<div>Zalecenia: {{card.recom}}</div>
+<div>Id lekarza: {{card.doctorId}}</div>
+</div>
 </div>
 </body>
 </html>

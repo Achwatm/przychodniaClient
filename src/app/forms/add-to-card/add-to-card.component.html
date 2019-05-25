@@ -1,0 +1,31 @@
+<html>
+<body>
+<h1>Dodaj wpis w karcie pacjenta</h1>
+<form  [formGroup]="patientCard" (ngSubmit)="onSubmit()">
+
+  <label>
+    Pesel:
+    <input type="text" formControlName="pesel">
+  </label>
+
+
+  <label>
+   Opis wizyty:
+    <input type="text" formControlName="visit">
+  </label>
+
+  <label>
+    Zalecenia:
+    <input type="text" formControlName="recom">
+  </label>
+
+  <label>
+    Id lekarza
+    <input type="text" formControlName="doctorId">
+  </label>
+
+
+  <button type="submit" [disabled]="!patientCard.valid">Dodaj Wpis</button>
+</form>
+</body>
+</html>
