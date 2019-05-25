@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 html {
   scroll-behavior: smooth;
-  background: url("assets/background/back.jpg") no-repeat center center fixed;
+  background: url("assets/background/b.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -23,8 +23,12 @@ body{
   bottom:0;
   width:70%;
   height:5%;		/* Wysokość stopki */
-  background:white;
+  background: #079aeb ;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
 }
 li{
   display: inline;

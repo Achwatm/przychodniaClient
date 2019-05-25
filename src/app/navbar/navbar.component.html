@@ -1,13 +1,16 @@
+
 <div id="container" style="display: flex; justify-content: space-around">
-  <img src="../../assets/background/menu.jpg" width="100px" >
+<h1>PRZYCHODNIA "ZDROWIE"</h1>
 <nav>
-  <a  [routerLink]= "['/home']"><div> Strona główna </div> </a>
-  <a *ngIf="role == 'user' " [routerLink]= "['/patients']"><div> Pacjenci </div> </a>
-  <a *ngIf="role == '' || role == NULL" [routerLink]= "['/patientAdd']"><div> Dodaj pacjenta </div> </a>
-  <a  style="align-content: center" [routerLink]= "['/doctors']" ><div> Lekarze  </div></a>
- <a *ngIf="role == '' || role == NULL" [routerLink]= "['/log-in']">  <div>Logowanie</div></a>
-  <a *ngIf="role == '' || role == NULL" [routerLink]= "['/registration']" > <div>Rejestracja</div></a>
-  <a *ngIf="role != '' && role != NULL" [routerLink]= "['/log-in']" (click)="logout()" > <div>logout</div></a>
+  <a  [routerLink]= "['/home']"><button> Strona główna </button> </a>
+  <a *ngIf="role == 'doctor' || role == 'recepcjonist' " [routerLink]= "['/patients']"><button> Pacjenci </button> </a>
+  <a *ngIf="role == 'user' " [routerLink]= "['/showPatientCard/' + pesel]"><button> Karta Pacjenta </button> </a>
+  <a *ngIf="role == '' || role == NULL" [routerLink]= "['/patientAdd']"><button> Dodaj pacjenta </button> </a>
+  <a  style="align-content: center" [routerLink]= "['/doctors']" ><button> Lekarze  </button></a>
+ <a *ngIf="role == '' || role == NULL" [routerLink]= "['/log-in']">  <button>Logowanie</button></a>
+  <a *ngIf="role == '' || role == NULL" [routerLink]= "['/registration']" > <button>Rejestracja</button></a>
+  <a *ngIf="role != '' && role != NULL" [routerLink]= "['/log-in']" (click)="logout()" > <button>logout</button></a>
 </nav>
-  <img src="../../assets/background/menu.jpg" width="100px" >
+
 </div>
+

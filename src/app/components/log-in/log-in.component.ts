@@ -17,11 +17,17 @@ export class LogInComponent {
     constructor(private data: DataService) { }
 
   onSubmit() {
-      console.log(this.login.value);
-      this.data.login(this.login.value);
-      console.log(sessionStorage.getItem('rola'));
+      if (this.login.controls['role'].value === 'user' ) {
+        console.log(this.login.value);
+        this.data.login(this.login.value);
+        console.log(sessionStorage.getItem('rola'));
+      } else
+        if (this.login.controls['role'].value === 'doctor') {
+          console.log(this.login.value);
+          this.data.doctorLogin(this.login.value);
+          console.log(sessionStorage.getItem('rola'));
+        }
       window.location.href = 'home';
-
   }
 
 }

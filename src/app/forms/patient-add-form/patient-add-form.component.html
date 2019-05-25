@@ -1,5 +1,6 @@
 <html>
 <body>
+<h1>Dodaj pacjenta:</h1>
   <form  [formGroup]="patient" (ngSubmit)="onSubmit()">
 
   <label>
@@ -31,7 +32,7 @@
     Nr ubezpieczenia:
     <input type="text" formControlName="nrUbezpieczenia">
   </label>
-    <button type="submit" [disabled]="!patient.valid">Submit</button>
+    <button type="submit" [disabled]="!patient.valid">Dodaj pacjenta</button>
 </form>
 <app-patients></app-patients>
 </body>

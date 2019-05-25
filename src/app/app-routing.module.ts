@@ -6,6 +6,7 @@ import {LogInComponent} from './components/log-in/log-in.component';
 import {SignUpFormComponent} from './forms/sign-up-form/sign-up-form.component';
 import {HomeComponent} from './components/home/home.component';
 import {PatientAddFormComponent} from './forms/patient-add-form/patient-add-form.component';
+import {PatientCardComponent} from './components/patient-card/patient-card.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'patientAdd',
     component: PatientAddFormComponent
+  },
+  {
+    path: 'showPatientCard/' + sessionStorage.getItem('pesel') ,
+    component: PatientCardComponent
   }
 ];
 

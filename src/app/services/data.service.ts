@@ -66,6 +66,7 @@ export class DataService {
       (val) => {
         console.log('POST call successful value returned in body', val);
        sessionStorage.setItem('rola', user.role );
+        sessionStorage.setItem('pesel', user.pesel.toString() );
       },
       response => {
         console.log('POST call in error', response);
@@ -74,5 +75,23 @@ export class DataService {
       () => {
         console.log('The POST observable is now completed.');
       });
+  }
+  doctorLogin(user: User) {
+    return this.http.post(this.url + '/doctorLogin', user, this.httpOptions).subscribe(
+      (val) => {
+        console.log('POST call successful value returned in body', val);
+        sessionStorage.setItem('rola', user.role );
+        sessionStorage.setItem('pesel', user.pesel.toString() );
+      },
+      response => {
+        console.log('POST call in error', response);
+        alert('Błąd logowania, sprawdź dane logowania');
+      },
+      () => {
+        console.log('The POST observable is now completed.');
+      });
+  }
+  getPatientCard() {
+    return this.http.get(this.url + '/showPatientCard/' + sessionStorage.getItem('pesel'));
   }
 }

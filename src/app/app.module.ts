@@ -13,6 +13,8 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { SignUpFormComponent } from './forms/sign-up-form/sign-up-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { PatientCardComponent } from './components/patient-card/patient-card.component';
+import { MyAccountComponent } from './components/my-account/my-account.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HomeComponent } from './components/home/home.component';
     LogInComponent,
     SignUpFormComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    PatientCardComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,

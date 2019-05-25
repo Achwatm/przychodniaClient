@@ -1,5 +1,6 @@
 <html>
 <body>
+<h1>Dodaj lekarza</h1>
 <form  [formGroup]="doctor" (ngSubmit)="onSubmit()">
 
   <label>
@@ -33,7 +34,7 @@
   </label>
 
 
-  <button type="submit" [disabled]="!doctor.valid">Submit</button>
+  <button type="submit" [disabled]="!doctor.valid">Dodaj lekarza</button>
 </form>
 </body>
 </html>

@@ -19,13 +19,13 @@
   <label>
     Rola:
   <select name="nazwa" formControlName="role">
-    <option>user</option>
+    <option selected="selected">user</option>
     <option>doctor</option>
     <option>receptionist</option>
   </select>
   </label>
 
-  <button type="submit" [disabled]="!login.valid">Submit</button>
+  <button type="submit" [disabled]="!login.valid">Zaloguj</button>
 </form>
 </body>
 </html>
