@@ -1,0 +1,33 @@
+<html>
+<body>
+<h1>Dodaj wpis w karcie pacjenta</h1>
+<form  [formGroup]="appointment" (ngSubmit)="onSubmit()">
+
+  <label>
+    Id lekarza:
+    <input type="text" formControlName="doctorId">
+  </label>
+
+  <label>
+    Pesel:
+    <input type="text" formControlName="pesel">
+  </label>
+
+
+  <label>
+    Data:
+    <input type="date" formControlName="date">
+  </label>
+
+  <label>
+    Godzina:
+    <input type="text" formControlName="time">
+  </label>
+
+
+
+  <button type="submit" [disabled]="!appointment.valid">Dodaj Wpis</button>
+  <app-doctors></app-doctors>
+</form>
+</body>
+</html>

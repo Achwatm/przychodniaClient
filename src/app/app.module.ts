@@ -17,6 +17,8 @@ import { PatientCardComponent } from './components/patient-card/patient-card.com
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import { AddToCardComponent } from './forms/add-to-card/add-to-card.component';
 import { AddReferralComponent } from './forms/add-referral/add-referral.component';
+import { ShowAppointmentsComponent } from './components/show-appointments/show-appointments.component';
+import { MakeAppointmentComponent } from './forms/make-appointment/make-appointment.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AddReferralComponent } from './forms/add-referral/add-referral.componen
     PatientCardComponent,
     MyAccountComponent,
     AddToCardComponent,
-    AddReferralComponent
+    AddReferralComponent,
+    ShowAppointmentsComponent,
+    MakeAppointmentComponent
   ],
   imports: [
     BrowserModule,

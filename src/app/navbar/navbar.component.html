@@ -3,9 +3,11 @@
 <h1>PRZYCHODNIA "ZDROWIE"</h1>
 <nav>
   <a  [routerLink]= "['/home']"><button> Strona główna </button> </a>
+  <a  *ngIf="role == 'receptionist' || role=='doctor'" [routerLink]= "['/showAppointments']"><button> Harmonogram </button> </a>
   <a *ngIf="role == 'doctor' || role == 'receptionist' " [routerLink]= "['/patients']"><button> Pacjenci </button> </a>
-  <a *ngIf="role == 'doctor' " [routerLink]= "['/addRegistry']"><button> Wpis do karty pacjenta </button> </a>
-  <a *ngIf="role == 'doctor' " [routerLink]= "['/addReferral']"><button> Wystaw skierowanie </button> </a>
+  <a *ngIf="role == 'user' || role == 'receptionist' " [routerLink]= "['/makeAppointment']"><button> Umów wizytę </button> </a>
+  <a *ngIf="role == 'doctor' " [routerLink]= "['/addRegistry']"><button> Karta pacjenta </button> </a>
+  <a *ngIf="role == 'doctor' " [routerLink]= "['/addReferral']"><button> Skierowanie </button> </a>
   <a *ngIf="role == 'user' " [routerLink]= "['/showPatientCard/' + pesel]"><button> Karta Pacjenta </button> </a>
   <a *ngIf="role == 'receptionist'" [routerLink]= "['/patientAdd']"><button> Dodaj pacjenta </button> </a>
   <a *ngIf="role == 'receptionist'" [routerLink]= "['/doctorAdd']"><button> Dodaj Lekarza </button> </a>

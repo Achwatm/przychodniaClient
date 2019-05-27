@@ -3,6 +3,5 @@ export class Doctor {
   name: string;
   surname: string;
   speciality: string;
-  licenseNumber: string;
   phoneNumber: string;
 }

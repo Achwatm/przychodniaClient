@@ -5,6 +5,7 @@ import {Patient} from '../classes/patient';
 import {User} from '../classes/user';
 import {Card} from '../classes/card';
 import {Referral} from '../classes/referral';
+import {Appointment} from '../classes/appointment';
 
 @Injectable({providedIn: 'root'})
 export class DataService {
@@ -134,5 +135,23 @@ export class DataService {
   }
   getPatientCard() {
     return this.http.get(this.url + '/showPatientCard/' + sessionStorage.getItem('pesel'));
+  }
+  getAppointments() {
+    return this.http.get(this.url + '/showAppointments');
+  }
+  getDoctorAppointments() {
+    return this.http.get(this.url + '/showAppointments/' + sessionStorage.getItem('pesel'));
+  }
+  makeAppointment(appointment: Appointment) {
+    return this.http.post(this.url + '/makeAppointment', appointment, this.httpOptions).subscribe(
+      (val) => {
+        console.log('POST call successful value returned in body', val);
+      },
+      response => {
+        console.log('POST call in error', response);
+      },
+      () => {
+        console.log('The POST observable is now completed.');
+      });
   }
 }

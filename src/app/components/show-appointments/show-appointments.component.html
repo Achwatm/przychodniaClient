@@ -1,0 +1,7 @@
+<body>
+<h1 style="color: white">harmonogram</h1>
+<table>
+  <tr><td>Id lekarza</td><td>Pesel pacjenta</td><td>Data</td><td>godzina</td>
+  <tr *ngFor="let appo of appointments"><td>{{appo.doctorId}}</td><td>{{appo.pesel}}</td><td>{{appo.date}}</td><td>{{appo.time}}</td>
+</table>
+</body>

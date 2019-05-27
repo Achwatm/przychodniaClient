@@ -1,0 +1,38 @@
+
+body{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  z-index: 1;
+}
+form{
+  flex-direction: column;
+  display: flex;
+  width: content-box;
+  width: 50%;
+  justify-content:space-around;
+  height: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+
+
+}
+label{
+  display: flex;
+
+  justify-content: space-between;
+
+}
+button{
+  width: 100px;
+}
+input{
+  height: 12px;
+}
+
+
